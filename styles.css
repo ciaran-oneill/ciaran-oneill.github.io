@@ -1,8 +1,19 @@
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background:lightskyblue
+    background:blue;
     
 }
+.assignment {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    background: lightskyblue
+}
+.assignment img {
+    width: 200px;
+    padding: 10px;
+}
+
 h1 {
     color:black;
     text-align: center
