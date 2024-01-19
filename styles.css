@@ -1,0 +1,32 @@
+/* Stylesheet for main page */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #333; 
+}
+
+body {
+    background-color: #e6f7ff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White container background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for container */
+}
+
+/* Recolor the links of each assignment */
+a {
+    text-decoration: none; 
+    color: #3498db; /* Blue link color */
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #2980b9; /* Darker blue hover color */
+}

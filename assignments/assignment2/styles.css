@@ -1,0 +1,76 @@
+/* styles.css */
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif; /* Change to your preferred font-family */
+    background-size: cover;
+    color: #333; /* Text color */
+}
+
+/* Header styles */
+header {
+    background-color: #ffcc00; /* Header background color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #4CAF50; /* Navigation background color */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Navigation link color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #333; /* Navigation link hover color */
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+}
+
+/* Image styles */
+img {
+    max-width: 28%;
+    height: auto;
+    border: 2px solid #ddd; /* Image border color */
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #333; /* Table border color */
+    padding: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    text-align: center;
+    padding: 10px;
+}
