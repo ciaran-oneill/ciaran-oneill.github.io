@@ -1,22 +1,22 @@
-/* styles.css */
+/* Stylesheet for Assignment 2 */
 
 /* Body styles */
 body {
-    font-family: 'Arial', sans-serif; /* Change to your preferred font-family */
-    background-size: cover;
-    color: #333; /* Text color */
+    font-family: 'Arial', sans-serif; 
+    background-color: #c6f4ff; 
+    color: #1a1a1a; 
 }
 
 /* Header styles */
 header {
-    background-color: #ffcc00; /* Header background color */
+    background-color: #3498db; 
     padding: 20px;
     text-align: center;
 }
 
 /* Navigation styles */
 nav {
-    background-color: #4CAF50; /* Navigation background color */
+    background-color: #1a5793; 
 }
 
 nav ul {
@@ -32,14 +32,14 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff; /* Navigation link color */
+    color: #fff; 
     padding: 5px 10px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 nav a:hover {
-    background-color: #333; /* Navigation link hover color */
+    background-color: #2c3e50; 
 }
 
 /* Section styles */
@@ -51,7 +51,7 @@ section {
 img {
     max-width: 28%;
     height: auto;
-    border: 2px solid #ddd; /* Image border color */
+    border: 2px solid #3498db;
     padding: 5px;
     margin-bottom: 20px;
 }
@@ -63,14 +63,6 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #333; /* Table border color */
-    padding: 10px;
-}
-
-/* Footer styles */
-footer {
-    background-color: #333; /* Footer background color */
-    color: #fff; /* Footer text color */
-    text-align: center;
+    border: 1px solid #1a1a1a;
     padding: 10px;
 }
