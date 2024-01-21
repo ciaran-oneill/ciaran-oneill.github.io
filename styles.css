@@ -40,14 +40,13 @@ body {
     border-radius: 4px;
 }
 
-/* Recolor the links of each assignment */
-a {
+.assignment h2 {
     text-decoration: none; 
     color: #3498db; /* Blue link color */
 }
 
 /* Hover effect for links */
-a:hover {
+.assignment h2:hover {
     color: #2980b9; /* Darker blue hover color */
 }
 
