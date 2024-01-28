@@ -1,62 +1,55 @@
-/* Stylesheet for main page */
-
 body {
-    font-family: 'Arial', sans-serif;
-    
+    background-color: lightgoldenrodyellow;
 }
 
-#main-header h1, h2 {
+header h1, h2 {
     text-align: center;
 }
 
-.all-assignments {
-    
-    padding: 20px; /* Add padding to the container */
-    max-width: 1200px; /* Set a maximum width for the container */
-    margin: 0 auto; /* Center the container horizontally */
+.assignments-container {
+    background-color: lightblue;
+    width: 100%;
+    height: 100%;
+    flex: 2;
+    margin-right: 10px;
 }
 
-body {
-    color: #333; 
-}
-
-body {
-    background-color: #e6f7ff;
+.assignments-container h2 {
+    text-align: center;
 }
 
 .assignment {
-    flex: 0 1 calc(33.33% - 20px); /* Set the width of each assignment to approximately one-third of the container */
-    margin: 10px; /* Add margin around each assignment */
-    background-color: lightblue;
-    padding: 10px;
-    border: 2px solid blue;
-    text-align: center;
-    max-width: 350px;
+    border-bottom: 1px solid lightgoldenrodyellow;
+    height: 280px;
 }
 
-.assignment img {
+.content img {
+   display: block;
+   margin: 0 auto;
+}
+
+.projects-container {
+    background-color: lightgreen;
+    width: 100%;
+    height: 100%;
+    flex: 2;
+    margin-left: 10px;
+}
+
+
+.project {
+    border-bottom: 1px solid lightgoldenrodyellow;
+    height: 280px;
+
+}
+
+.content {
+    display: flex;
+    padding: 30px;
+    margin-top: -30px;
+}
+
+.content img {
     width: 300px;
     height: 150px;
-    border-radius: 4px;
-}
-
-.assignment h2 {
-    text-decoration: none; 
-    color: #3498db; /* Blue link color */
-}
-
-/* Hover effect for links */
-.assignment h2:hover {
-    color: #2980b9; /* Darker blue hover color */
-}
-
-
-/* Larger Resolutions */
-@media (min-width:900px) {
-    .all-assignments {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if there isn't enough space */
-    justify-content: space-around; /* Distribute space evenly along the main axis */
-    align-items: flex-start;
-    }
 }
