@@ -312,6 +312,15 @@ header {
     margin-left: 10px;
 }
 
+.box2-content h3 {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.box2-content h2  {
+    margin-top: 0;
+}
+
 /* Typography */
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Impact;
@@ -430,6 +439,8 @@ body {
 .footer-2-bottom-text h3 {
     color:white;
     margin-bottom: -10px;
+    text-align: center;
+    border-bottom: 1px solid white;
 }
 
 .footer-3 {
