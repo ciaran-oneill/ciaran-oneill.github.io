@@ -1,9 +1,10 @@
-// Toggles the nav items to show/hide when the hamburger menu is clicked
-const toggleHamburger = () => {
-    document.getElementById("nav-items").classList.toggle("hide");
-  };
-  
-  // Calls the toggleHamburger function when the hamburger menu is clicked
-  window.onload = () => {
-    document.getElementById("hamburger").onclick = toggleHamburger;
-  };
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggles the nav items to show/hide when the hamburger menu is clicked
+    const toggleHamburger = () => {
+        const navItems = document.getElementById("nav-items");
+        navItems.classList.toggle("hide");
+    };
+
+    // Attaches the event listener to the hamburger div
+    document.getElementById("hamburger").addEventListener('click', toggleHamburger);
+});
