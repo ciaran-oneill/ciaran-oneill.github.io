@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Header and site title styles */
+#main-header {
+    background-color: beige;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#site-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation menu styles */
+#nav-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+#nav-items li {
+    padding: 15px 0;
+}
+
+#nav-items a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* Hamburger menu styles */
+#hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+}
+/* Adjustments for larger resolutions */
+@media screen and (min-width: 768px) {
+    /* Hides hamburger menu on larger resolutions */
+    #hamburger {
+        display: none;
+    }
+
+    #nav-items {
+        display: flex; /* Display nav items in a row */
+        align-items: center; /* Aligns nav items vertically */
+        justify-content: center; /* Centers nav items horizontally */
+    }
+
+    #nav-items li {
+        display: inline-block; /* Displays list items in a line */
+        margin: 0 15px; /* Adds horizontal margin between nav items */
+    }
+    
+    .home-content-container {
+        display: flex;
+    }
+
+    .home-column-1 {
+        width: 40%;
+    }
+    .home-column-2 {
+        width: 70%;
+    }
+    .home-column-3 {
+        width: 40%;
+    }
+
+    .home-column-1 img {
+        height: 300px;
+        width: auto;
+    }
+}
