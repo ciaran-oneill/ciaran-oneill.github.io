@@ -53,3 +53,16 @@ header h1, h2 {
     width: 300px;
     height: 150px;
 }
+
+.assignment a, .project a {
+    color: lightgoldenrodyellow;  /* Sets the link color */
+    text-decoration: none;  /* Removes underline from links */
+}
+
+.assignment a:hover, .project a:hover {
+    text-decoration: underline;  /* Optional: Adds underline on hover for better UX */
+}
+.assignment, .project {
+    box-sizing: border-box;
+}
+
