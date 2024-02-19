@@ -1,0 +1,90 @@
+/* Stylesheet for Assignment 9 */
+/* Written by Ciaran O'Neill */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    background-color: #f2f2ec;
+    padding: 20px 0;
+}
+
+#main-content {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.bounce-ball {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    height: 300px;
+    margin: auto;
+}
+
+.bounce-ball a {
+    display: inline-block;
+    margin: 10px 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.ball-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 150px;
+    width: 100px;
+    overflow: hidden;
+    background-color: white;
+    margin: 0;
+}
+
+
+.ball-container img {
+    height: 20px;
+    width: 20px;
+}
+
+
+.yoga-moves {
+    background-color: lightblue;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.yoga {
+    display:flex;
+    justify-content:flex-start;
+    margin-bottom:10px;
+    margin-left: 100px;
+    margin-right: 30px;
+    
+}
+
+.yoga-moves h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.yoga p {
+    display: none;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.yoga img {
+    height: 75px;
+    width:75px;
+    cursor: pointer;
+}
