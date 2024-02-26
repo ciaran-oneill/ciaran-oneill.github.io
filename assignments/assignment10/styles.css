@@ -1,0 +1,49 @@
+/* Stylesheet for Assignment 10 */
+/* Made by Ciaran O'Neill */
+
+body {
+    background-color: lightskyblue;
+}
+
+#content {
+    background-color: lightgoldenrodyellow;
+}
+
+#advertisement-text {
+    text-align: center;
+}
+
+header h1, h2 {
+    color: darkgreen;
+    text-align: center;
+}
+
+#images img{
+    display:block;
+    margin: 0 auto;
+    width: 500px;
+    height:330px;
+}
+
+#images p {
+    text-align: center;
+}
+
+#images a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+#images a:hover {
+    color: limegreen;
+}
+
+#advertisement {
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#images {
+    margin-top: 25px;
+}
