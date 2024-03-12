@@ -1,0 +1,75 @@
+/* styles.css */
+body {
+    background-color: lightsteelblue;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.house-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 20px;
+    padding: 100px;
+    border-radius: 8px;
+
+}
+
+.top-section {
+    display: flex;
+    margin-bottom: 20px;
+    height: 800px;
+}
+
+.top-section h2 {
+    font-size: 100px;
+}
+
+.main-image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info-section {
+    background-color: lightslategray; /* Red background for the info section */
+    padding: 10px;
+    width: 50%;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.info-section h2 {
+    margin-top: 0;
+}
+
+.info-section p,
+.info-section ul {
+    padding: 0;
+    margin: 10px 0;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.info-section li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.floor-plans {
+    display: flex;
+    justify-content: space-between;
+}
+
+.floor-plan-image {
+    width: calc(50% - 10px); /* Adjust width to have some space between images */
+    height: auto;
+    border-radius: 8px;
+}
