@@ -4,12 +4,7 @@ const toggleHamburger = () => {
 
 window.onload = () => {
   document.getElementById("hamburger").onclick = toggleHamburger;
-  document.getElementById("team-select").addEventListener('change', function() {
-      const teamName = this.value;
-      if (teamName) {
-          fetchPlayerStats(`json/${teamName}.json`);
-      }
-  });
+  fetchPlayerStats("json/players.json"); 
 };
 
 const fetchPlayerStats = async (fileName) => {
