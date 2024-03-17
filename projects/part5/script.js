@@ -1,3 +1,22 @@
+const toggleHamburger = () => {
+  document.getElementById("nav-items").classList.toggle("hide");
+};
+
+window.onload = () => {
+  document.getElementById("hamburger").onclick = toggleHamburger;
+  fetchPlayerStats("json/players.json"); 
+};
+
+const fetchPlayerStats = async (fileName) => {
+  try {
+      const response = await fetch(fileName);
+      const data = await response.json();
+      displayPlayerStats(data.players);
+  } catch (error) {
+      console.error("Fetching player stats failed:", error);
+  }
+};
+
 const displayPlayerStats = (players) => {
   const container = document.getElementById("player-stats");
   container.innerHTML = ''; // Clear previous content
