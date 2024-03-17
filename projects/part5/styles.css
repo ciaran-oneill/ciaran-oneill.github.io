@@ -306,6 +306,11 @@ tr:nth-child(even) {
 
 }
 
+.player-image {
+  width: 30px;
+  height: auto;
+}
+
 
 
 @media screen and (min-width: 768px) {
@@ -401,3 +406,4 @@ tr:nth-child(even) {
 }
 
 }
+
