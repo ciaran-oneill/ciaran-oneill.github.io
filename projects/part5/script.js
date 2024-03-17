@@ -24,7 +24,7 @@ const displayPlayerStats = (players) => {
 
   // Create table header
   const headerRow = table.insertRow();
-  const headers = ["Player", "Position", "Team", "PPG", "RPG", "APG", "SPG", "BPG", "Field Goal %"];
+  const headers = ["Name", "Position", "Team", "PPG", "RPG", "APG", "SPG", "BPG", "Field Goal %"];
   headers.forEach(headerText => {
     const headerCell = document.createElement("th");
     headerCell.textContent = headerText;
@@ -35,18 +35,10 @@ const displayPlayerStats = (players) => {
   players.forEach(player => {
     const row = table.insertRow();
     
-    // Insert player image in the first column
-    const imgCell = row.insertCell();
-    const img = document.createElement("img");
-    img.src = player.img_name;
-    img.alt = player.name;
-    img.classList.add("player-image");
-    imgCell.appendChild(img);
-    
     // Insert player name in the first column
     const nameCell = row.insertCell();
     nameCell.textContent = player.name;
-    
+
     // Insert position, team, stats, etc.
     row.insertCell().textContent = player.position;
     row.insertCell().textContent = player.team;
