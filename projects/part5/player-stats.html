@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Player Stats</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header id="main-header" class="flex-container">
+        <!-- Header title -->
+        <h2 id="header-title">NBA Nerds</h2>
+        <!-- Actual hamburger menu-->
+        <div id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <!-- Navigation items-->
+    <nav id="main-nav">
+        <!-- Navigation links/list -->
+        <ul id="nav-items" class="hide">
+            <a href="index.html"><li job="nav">Home</li></a>
+            <a href="player-stats.html"><li>Player Stats</li></a>
+            <a href="team-stats.html"><li>Team Stats</li></a>
+            <a href="records.html"><li>Records</li></a>
+            <a href="legacies.html"><li>Legacies</li></a>
+        </ul>
+    </nav>
+
+
+        <div class="player-stats-container">
+            <h2>Select Team to View Player Stats</h2>
+            <select name="teams" id="team-select">
+                <option value="">Select Team</option>
+                <option value="celtics">Boston Celtics</option>
+                <option value="lakers">Los Angeles Lakers</option>
+            </select>
+
+          </div>
+
+          <div id="player-stats"></div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
