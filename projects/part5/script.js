@@ -4,7 +4,7 @@ const toggleHamburger = () => {
 
 window.onload = () => {
   document.getElementById("hamburger").onclick = toggleHamburger;
-  fetchPlayerStats("json/players.json"); // Assuming the JSON file is named players.json
+  fetchPlayerStats("players.json"); // Assuming the JSON file is named players.json
 };
 
 const fetchPlayerStats = async (fileName) => {
