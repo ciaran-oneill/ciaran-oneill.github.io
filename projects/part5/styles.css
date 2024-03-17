@@ -307,7 +307,7 @@ tr:nth-child(even) {
 }
 
 .player-image {
-  width: 30px;
+  width: 100px;
   height: auto;
 }
 
