@@ -1,0 +1,94 @@
+
+{
+    "players": [
+      {
+        "_id": 1,
+        "img_name": "images/lebron_james.jpg",
+        "name": "LeBron James",
+        "team": "Los Angeles Lakers",
+        "position": "SF",
+        "stats": ["25.4 PPG", "7.9 RPG", "7.9 APG"],
+        "height": "6'9\"",
+        "weight": "250 lbs",
+        "college": "St. Vincent-St. Mary HS"
+      },
+      {
+        "_id": 2,
+        "img_name": "images/stephen_curry.jpg",
+        "name": "Stephen Curry",
+        "team": "Golden State Warriors",
+        "position": "PG",
+        "stats": ["30.1 PPG", "5.5 RPG", "6.5 APG"],
+        "height": "6'3\"",
+        "weight": "185 lbs",
+        "college": "Davidson"
+      },
+      {
+        "_id": 3,
+        "img_name": "images/giannis_antetokounmpo.jpg",
+        "name": "Giannis Antetokounmpo",
+        "team": "Milwaukee Bucks",
+        "position": "PF",
+        "stats": ["29.5 PPG", "13.6 RPG", "5.6 APG"],
+        "height": "6'11\"",
+        "weight": "242 lbs",
+        "college": "N/A"
+      },
+      {
+        "_id": 4,
+        "img_name": "images/luka_doncic.jpg",
+        "name": "Luka Dončić",
+        "team": "Dallas Mavericks",
+        "position": "PG",
+        "stats": ["27.7 PPG", "8.0 RPG", "8.6 APG"],
+        "height": "6'7\"",
+        "weight": "230 lbs",
+        "college": "N/A"
+      },
+      {
+        "_id": 5,
+        "img_name": "images/joel_embiid.jpg",
+        "name": "Joel Embiid",
+        "team": "Philadelphia 76ers",
+        "position": "C",
+        "stats": ["28.5 PPG", "10.8 RPG", "3.1 APG"],
+        "height": "7'0\"",
+        "weight": "280 lbs",
+        "college": "Kansas"
+      },
+      {
+        "_id": 6,
+        "img_name": "images/damian_lillard.jpg",
+        "name": "Damian Lillard",
+        "team": "Portland Trail Blazers",
+        "position": "PG",
+        "stats": ["29.1 PPG", "4.3 RPG", "8.0 APG"],
+        "height": "6'2\"",
+        "weight": "195 lbs",
+        "college": "Weber State"
+      },
+      {
+        "_id": 7,
+        "img_name": "images/kawhi_leonard.jpg",
+        "name": "Kawhi Leonard",
+        "team": "Los Angeles Clippers",
+        "position": "SF",
+        "stats": ["27.1 PPG", "7.1 RPG", "4.9 APG"],
+        "height": "6'7\"",
+        "weight": "225 lbs",
+        "college": "San Diego State"
+      },
+      {
+        "_id": 8,
+        "img_name": "images/kevin_durant.jpg",
+        "name": "Kevin Durant",
+        "team": "Brooklyn Nets",
+        "position": "SF",
+        "stats": ["26.9 PPG", "7.1 RPG", "5.6 APG"],
+        "height": "6'10\"",
+        "weight": "240 lbs",
+        "college": "Texas"
+      }
+    ]
+  }
+  

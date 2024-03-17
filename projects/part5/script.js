@@ -4,62 +4,55 @@ const toggleHamburger = () => {
 
 window.onload = () => {
   document.getElementById("hamburger").onclick = toggleHamburger;
-  document.getElementById("team-select").addEventListener('change', function() {
-      const teamName = this.value;
-      if (teamName) {
-          fetchPlayerStats(`${teamName}.json`);
-          console.log($(teamName));
-      }
-  });
+  fetchPlayerStats("json/players.json"); // Assuming the JSON file is named players.json
 };
 
 const fetchPlayerStats = async (fileName) => {
   try {
-    const response = await fetch(fileName);
-    return await response.json();
+      const response = await fetch(fileName);
+      const data = await response.json();
+      displayPlayerStats(data.players);
   } catch (error) {
-    console.error("Fetching player stats failed:", error);
-    return null; 
+      console.error("Fetching player stats failed:", error);
   }
 };
 
-
-
-const displayPlayerStats = (players, fileName) => {
+const displayPlayerStats = (players) => {
   const container = document.getElementById("player-stats");
   container.innerHTML = ''; // Clear previous content
   const table = document.createElement("table");
-  const teamName = players.length > 0 ? players[0].team : "Selected Team"; // Use the team name from the first player
 
-  table.innerHTML = `
-      <tr class="team-name">
-          <th colspan="8">${teamName}</th> <!-- Corrected colspan to 8 -->
-      </tr>
-      <tr>
-          <th>Position</th>
-          <th>Player</th>
-          <th>Points Per Game</th>
-          <th>Rebounds Per Game</th>
-          <th>Assists Per Game</th>
-          <th>Steals Per Game</th>
-          <th>Blocks Per Game</th>
-          <th>Field Goal %</th>
-      </tr>
-  `;
+  // Create table header
+  const headerRow = table.insertRow();
+  const headers = ["Player", "Position", "Team", "PPG", "RPG", "APG", "SPG", "BPG", "Field Goal %"];
+  headers.forEach(headerText => {
+    const headerCell = document.createElement("th");
+    headerCell.textContent = headerText;
+    headerRow.appendChild(headerCell);
+  });
 
-
+  // Populate table rows with player information
   players.forEach(player => {
-      const row = table.insertRow(-1);
-      row.innerHTML = `
-          <td>${player.position}</td>
-          <td>${player.name}</td>
-          <td>${player.stats[0]}</td>
-          <td>${player.stats[1]}</td>
-          <td>${player.stats[2]}</td>
-          <td>${player.stats[3]}</td>
-          <td>${player.stats[4]}</td>
-          <td>${player.stats[5]}</td>
-      `;
+    const row = table.insertRow();
+    
+    // Insert player image in the first column
+    const imgCell = row.insertCell();
+    const img = document.createElement("img");
+    img.src = player.img_name;
+    img.alt = player.name;
+    img.classList.add("player-image");
+    imgCell.appendChild(img);
+    
+    // Insert player name in the first column
+    const nameCell = row.insertCell();
+    nameCell.textContent = player.name;
+    
+    // Insert position, team, stats, etc.
+    row.insertCell().textContent = player.position;
+    row.insertCell().textContent = player.team;
+    player.stats.forEach(stat => {
+      row.insertCell().textContent = stat;
+    });
   });
 
   container.appendChild(table);
