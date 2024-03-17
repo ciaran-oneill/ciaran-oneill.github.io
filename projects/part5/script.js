@@ -35,16 +35,14 @@ const displayPlayerStats = (players) => {
   players.forEach(player => {
     const row = table.insertRow();
     
-    // Insert image of player's name
-    const nameImageCell = row.insertCell();
-    const nameImage = document.createElement("img");
-    nameImage.src = player.img_name;
-    nameImage.alt = player.name;
-    nameImageCell.appendChild(nameImage);
-
-    // Insert player name in the next column
+    // Insert player image and name in the first column
     const nameCell = row.insertCell();
-    nameCell.textContent = player.name;
+    const playerImage = document.createElement("img");
+    playerImage.src = player.img_name;
+    playerImage.alt = player.name;
+    playerImage.classList.add("player-image");
+    nameCell.appendChild(playerImage);
+    nameCell.appendChild(document.createTextNode(player.name));
 
     // Insert position, team, stats, etc.
     row.insertCell().textContent = player.position;
