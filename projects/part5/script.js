@@ -4,7 +4,12 @@ const toggleHamburger = () => {
 
 window.onload = () => {
   document.getElementById("hamburger").onclick = toggleHamburger;
-  fetchPlayerStats("json/players.json"); 
+  document.getElementById("team-select").addEventListener('change', function() {
+      const teamName = this.value;
+      if (teamName) {
+          fetchPlayerStats(`json/${teamName}.json`);
+      }
+  });
 };
 
 const fetchPlayerStats = async (fileName) => {
@@ -24,7 +29,7 @@ const displayPlayerStats = (players) => {
 
   // Create table header
   const headerRow = table.insertRow();
-  const headers = ["Player", "Team", "Position", "PPG", "RPG", "APG", "SPG", "BPG", "Field Goal %"];
+  const headers = ["Player", "Position", "Team", "PPG", "RPG", "APG", "SPG", "BPG", "Field Goal %"];
   headers.forEach(headerText => {
     const headerCell = document.createElement("th");
     headerCell.textContent = headerText;
@@ -43,20 +48,13 @@ const displayPlayerStats = (players) => {
     img.classList.add("player-image");
     imgCell.appendChild(img);
     
-    // Insert team logo in the second column
-    const teamCell = row.insertCell();
-    const teamImg = document.createElement("img");
-    teamImg.src = `images/${player.team.toLowerCase()}_logo.png`; // Assuming logos are named as "teamname_logo.png"
-    teamImg.alt = player.team;
-    teamImg.classList.add("team-logo");
-    teamCell.appendChild(teamImg);
-
-    // Insert player name in the third column
+    // Insert player name in the first column
     const nameCell = row.insertCell();
     nameCell.textContent = player.name;
     
-    // Insert position, stats, etc.
+    // Insert position, team, stats, etc.
     row.insertCell().textContent = player.position;
+    row.insertCell().textContent = player.team;
     player.stats.forEach(stat => {
       row.insertCell().textContent = stat;
     });
