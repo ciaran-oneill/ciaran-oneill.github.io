@@ -76,20 +76,24 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }
 });
 
-document.getElementById("open-form-btn").addEventListener("click", function() {
-  document.getElementById("add-player-form").style.display = "block";
-});
-
-document.getElementById("add-player-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent form from submitting the traditional way
-  // Here you would normally handle form data, e.g., sending it to a server
-  console.log("Form submitted");
-  document.getElementById("add-player-form").style.display = "none";
+document.addEventListener('DOMContentLoaded', function() {
+  const openFormBtn = document.getElementById("open-form-btn");
+  const addPlayerForm = document.getElementById("add-player-form");
   const successMessage = document.getElementById("success-message");
-  successMessage.classList.remove("hide");
-  setTimeout(function() {
-      successMessage.classList.add("hide");
-  }, 2000); // Hide success message after 2 seconds
+
+  openFormBtn.addEventListener("click", function() {
+      addPlayerForm.style.display = "block";
+  });
+
+  addPlayerForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting in the traditional way
+      // Here, you would typically gather the form data and handle it (e.g., sending to a server or displaying on the page)
+      console.log("Form submitted");
+
+      addPlayerForm.style.display = "none"; // Hide the form
+      successMessage.classList.remove("hide"); // Show the success message
+      setTimeout(function() {
+          successMessage.classList.add("hide"); // Hide the success message after 2 seconds
+      }, 2000);
+  });
 });
-
-
