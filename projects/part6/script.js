@@ -76,23 +76,45 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+  // Access the 'Add Player' button and the form
   const openFormBtn = document.getElementById('open-form-btn');
   const addPlayerForm = document.getElementById('add-player-form');
   const successMessage = document.getElementById('success-message');
+  const playerStatsDiv = document.getElementById('player-stats');
 
-  openFormBtn.addEventListener('click', () => {
+  // Function to display the form
+  openFormBtn.addEventListener('click', function() {
     addPlayerForm.style.display = 'block';
   });
 
-  addPlayerForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    console.log('Form submitted');
-    // Here, implement the logic to handle the form data, e.g., display it in the list or send it to a server
+  // Function to handle form submission
+  addPlayerForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
 
-    // Show success message and hide form
+    // Extracting form data
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const position = document.getElementById('position').value;
+    const team = document.getElementById('team').value;
+    const ppg = document.getElementById('ppg').value;
+    const rpg = document.getElementById('rpg').value;
+    const apg = document.getElementById('apg').value;
+    const spg = document.getElementById('spg').value;
+    const bpg = document.getElementById('bpg').value;
+    const fgp = document.getElementById('fgp').value;
+
+    // Append new player data to the 'player-stats' div or other desired location
+    playerStatsDiv.innerHTML += `<div>${firstName} ${lastName} - ${position}, ${team} - PPG: ${ppg}, RPG: ${rpg}, APG: ${apg}, SPG: ${spg}, BPG: ${bpg}, FG%: ${fgp}</div>`;
+
+    // Display success message
     successMessage.classList.remove('hide');
-    setTimeout(() => successMessage.classList.add('hide'), 2000);
+    setTimeout(() => successMessage.classList.add('hide'), 2000); // Hide success message after 2 seconds
+
+    // Hide the form again
     addPlayerForm.style.display = 'none';
+
+    // Optionally, reset the form fields
+    addPlayerForm.reset();
   });
 });
