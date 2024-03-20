@@ -76,45 +76,38 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Access the 'Add Player' button and the form
+document.addEventListener('DOMContentLoaded', () => {
   const openFormBtn = document.getElementById('open-form-btn');
   const addPlayerForm = document.getElementById('add-player-form');
   const successMessage = document.getElementById('success-message');
   const playerStatsDiv = document.getElementById('player-stats');
 
-  // Function to display the form
-  openFormBtn.addEventListener('click', function() {
-    addPlayerForm.style.display = 'block';
+  openFormBtn.addEventListener('click', () => {
+      addPlayerForm.style.display = 'block';
   });
 
-  // Function to handle form submission
-  addPlayerForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+  addPlayerForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      
+      const formData = new FormData(addPlayerForm);
+      const playerData = {};
+      for (let [key, value] of formData.entries()) {
+          playerData[key] = value;
+      }
+      
+      // Simulating appending to player list (would be replaced with actual JSON manipulation in a full app)
+      const playerInfo = document.createElement('div');
+      playerInfo.textContent = `${playerData['first-name']} ${playerData['last-name']} - ${playerData.position}, ${playerData.team} - Stats: PPG: ${playerData.ppg}, RPG: ${playerData.rpg}, APG: ${playerData.apg}, SPG: ${playerData.spg}, BPG: ${playerData.bpg}, FG%: ${playerData.fgp}`;
+      playerStatsDiv.appendChild(playerInfo);
 
-    // Extracting form data
-    const firstName = document.getElementById('first-name').value;
-    const lastName = document.getElementById('last-name').value;
-    const position = document.getElementById('position').value;
-    const team = document.getElementById('team').value;
-    const ppg = document.getElementById('ppg').value;
-    const rpg = document.getElementById('rpg').value;
-    const apg = document.getElementById('apg').value;
-    const spg = document.getElementById('spg').value;
-    const bpg = document.getElementById('bpg').value;
-    const fgp = document.getElementById('fgp').value;
+      // Show success message
+      successMessage.classList.remove('hide');
+      setTimeout(() => {
+          successMessage.classList.add('hide');
+      }, 2000);
 
-    // Append new player data to the 'player-stats' div or other desired location
-    playerStatsDiv.innerHTML += `<div>${firstName} ${lastName} - ${position}, ${team} - PPG: ${ppg}, RPG: ${rpg}, APG: ${apg}, SPG: ${spg}, BPG: ${bpg}, FG%: ${fgp}</div>`;
-
-    // Display success message
-    successMessage.classList.remove('hide');
-    setTimeout(() => successMessage.classList.add('hide'), 2000); // Hide success message after 2 seconds
-
-    // Hide the form again
-    addPlayerForm.style.display = 'none';
-
-    // Optionally, reset the form fields
-    addPlayerForm.reset();
+      addPlayerForm.style.display = 'none'; // Optionally hide the form after submission
+      addPlayerForm.reset(); // Reset form fields after submission
   });
 });
+
