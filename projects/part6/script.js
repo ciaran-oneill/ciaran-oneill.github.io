@@ -76,24 +76,23 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const openFormBtn = document.getElementById("open-form-btn");
-  const addPlayerForm = document.getElementById("add-player-form");
-  const successMessage = document.getElementById("success-message");
+document.addEventListener('DOMContentLoaded', () => {
+  const openFormBtn = document.getElementById('open-form-btn');
+  const addPlayerForm = document.getElementById('add-player-form');
+  const successMessage = document.getElementById('success-message');
 
-  openFormBtn.addEventListener("click", function() {
-      addPlayerForm.style.display = "block";
+  openFormBtn.addEventListener('click', () => {
+    addPlayerForm.style.display = 'block';
   });
 
-  addPlayerForm.addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent the form from submitting in the traditional way
-      // Here, you would typically gather the form data and handle it (e.g., sending to a server or displaying on the page)
-      console.log("Form submitted");
+  addPlayerForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log('Form submitted');
+    // Here, implement the logic to handle the form data, e.g., display it in the list or send it to a server
 
-      addPlayerForm.style.display = "none"; // Hide the form
-      successMessage.classList.remove("hide"); // Show the success message
-      setTimeout(function() {
-          successMessage.classList.add("hide"); // Hide the success message after 2 seconds
-      }, 2000);
+    // Show success message and hide form
+    successMessage.classList.remove('hide');
+    setTimeout(() => successMessage.classList.add('hide'), 2000);
+    addPlayerForm.style.display = 'none';
   });
 });
