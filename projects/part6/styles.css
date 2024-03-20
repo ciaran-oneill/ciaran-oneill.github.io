@@ -417,6 +417,34 @@ tr:nth-child(even) {
   position: absolute;
 }
 
+@media screen and (min-width: 768px) {
+  .legacies-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start of the container */
+  }
+
+  .legacies-container-left,
+  .legacies-container-right {
+    flex-basis: 48%; /* Each takes up roughly half of the container, with a little space in between */
+  }
+
+  .video-responsive {
+    margin-bottom: 20px; /* Add some space below the video */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .legacies-container {
+    display: block; /* Stack the left and right containers */
+  }
+
+  .video-responsive {
+    margin-bottom: 20px; /* Add some space below the video */
+  }
+}
+
+
 
 @media screen and (min-width: 768px) {
   header {

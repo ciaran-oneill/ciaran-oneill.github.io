@@ -29,9 +29,20 @@ window.onload = () => {
           return;
       }
 
-      // Append new player data to the 'player-stats' div
-      const playerStatsDiv = document.getElementById("player-stats");
-      playerStatsDiv.innerHTML += `<div>${firstName} ${lastName} - ${position}, ${team} - PPG: ${ppg}, RPG: ${rpg}, APG: ${apg}, SPG: ${spg}, BPG: ${bpg}, FG%: ${fgp}</div>`;
+      // Create a new row for the player stats table
+      const table = document.getElementById("player-stats-table");
+      const newRow = table.insertRow();
+
+      // Insert cells for the new row
+      newRow.insertCell().textContent = `${firstName} ${lastName}`;
+      newRow.insertCell().textContent = position;
+      newRow.insertCell().textContent = team;
+      newRow.insertCell().textContent = ppg;
+      newRow.insertCell().textContent = rpg;
+      newRow.insertCell().textContent = apg;
+      newRow.insertCell().textContent = spg;
+      newRow.insertCell().textContent = bpg;
+      newRow.insertCell().textContent = fgp;
 
       // Display success message
       const successMessage = document.getElementById("success-message");
@@ -56,9 +67,8 @@ const fetchPlayerStats = async (fileName) => {
 };
 
 const displayPlayerStats = (players) => {
-  const container = document.getElementById("player-stats");
-  container.innerHTML = ""; // Clear previous content
   const table = document.createElement("table");
+  table.id = "player-stats-table";
 
   // Create table header
   const headerRow = table.insertRow();
@@ -89,5 +99,7 @@ const displayPlayerStats = (players) => {
       });
   });
 
+  // Append the table to the player-stats div
+  const container = document.getElementById("player-stats");
   container.appendChild(table);
 };
