@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Team Stats</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header id="main-header" class="flex-container">
+        <!-- Header title -->
+        <h2 id="header-title">NBA Nerds</h2>
+        <!-- Actual hamburger menu-->
+        <div id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <!-- Navigation items-->
+    <nav id="main-nav">
+        <!-- Navigation links/list -->
+        <ul id="nav-items" class="hide">
+          <a href="index.html"><li job="nav">Home</li></a>
+          <a href="player-stats.html"><li>Player Stats</li></a>
+          <a href="team-stats.html"><li>Team Stats</li></a>
+          <a href="records.html"><li>Records</li></a>
+          <a href="legacies.html"><li>Legacies</li></a>
+          <a href="contact-me.html"><li>Contact Me</li></a>
+        </ul>
+    </nav>
+
+    <div class="team-stats-container">
+        <div class="team-stats-container-left">
+            <div class="team-stats-container-left-top">
+                <h2>Select Conference To View Current Standings</h2>
+                <select name="conferences" id="conference-select">
+                    <option value="">Select Conference</option>
+                </select>
+            </div>
+            <div class="team-stats-container-left-bottom">
+                <h2>KEY:</h2>
+                <div class="key-container">
+                    <div class="key-1">
+                        <p>W</p>
+                        <p>L</p>
+                        <p>W/L%</p>
+                        <p>GB</p>
+                        <p>PTS/G</p>
+                        <p>PA/G</p>
+                        <p>SRS</p>
+                        <p>*</p>
+                        <p>#</p>
+                    </div>
+                    <div class="key-2">
+                        <p>Wins</p>
+                        <p>Losses</p>
+                        <p>Win/Loss Ratio</p>
+                        <p>Games Back From 1 Seed</p>
+                        <p>Points Per Game</p>
+                        <p>Points Allowed Per Game</p>
+                        <p>Simple Rating System</p>
+                        <p>In Playoff Picture</p>
+                        <p>In Play-in Picture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team-stats-container-right">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Team</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>W/L %</th>
+                    <th>GB</th>
+                    <th>PTS/G</th>
+                    <th>PA/G</th>
+                    <th>SRS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Boston Celtics*</td>
+                        <td>35</td>
+                        <td>11</td>
+                        <td>.761</td>
+                        <td>-</td>
+                        <td>120.3</td>
+                        <td>110.7</td>
+                        <td>10.14</td>
+                      </tr>
+                      <tr>
+                        <td>2. Milwaukee Bucks*</td>
+                        <td>32</td>
+                        <td>14</td>
+                        <td>.696</td>
+                        <td>3.0</td>
+                        <td>124.4</td>
+                        <td>120.1</td>
+                        <td>3.44</td>
+                      </tr>
+                      <tr>
+                        <td>3. Philadelphia 76ers*</td>
+                        <td>20</td>
+                        <td>15</td>
+                        <td>.659</td>
+                        <td>5.0</td>
+                        <td>119.5</td>
+                        <td>112.0</td>
+                        <td>6.57</td>
+                      </tr>
+                      <tr>
+                        <td>4. New York Knicks*</td>
+                        <td>29</td>
+                        <td>17</td>
+                        <td>.630</td>
+                        <td>6.0</td>
+                        <td>115.4</td>
+                        <td>109.8</td>
+                        <td>5.31</td>
+                      </tr>
+                      <tr>
+                        <td>5. Cleveland Cavaliers*</td>
+                        <td>27</td>
+                        <td>16</td>
+                        <td>.628</td>
+                        <td>6.5</td>
+                        <td>114.0</td>
+                        <td>109.8</td>
+                        <td>4.02</td>
+                      </tr>
+                      <tr>
+                        <td>6. Indiana Pacers*</td>
+                        <td>26</td>
+                        <td>20</td>
+                        <td>.565</td>
+                        <td>9.0</td>
+                        <td>125.0</td>
+                        <td>123.1</td>
+                        <td>1.81</td>
+                      </tr>
+                      <tr>
+                        <td>7. Miami Heat #</td>
+                        <td>24</td>
+                        <td>22</td>
+                        <td>.522</td>
+                        <td>11.0</td>
+                        <td>110.5</td>
+                        <td>111.6</td>
+                        <td>-1.67</td>
+                      </tr>
+                      <tr>
+                        <td>8. Orlando Magic #</td>
+                        <td>23</td>
+                        <td>22</td>
+                        <td>.511</td>
+                        <td>11.5</td>
+                        <td>111.3</td>
+                        <td>111.1</td>
+                        <td>0.70</td>
+                      </tr>
+                      <tr>
+                        <td>9. Chicago Bulls #</td>
+                        <td>21</td>
+                        <td>25</td>
+                        <td>.457</td>
+                        <td>14.0</td>
+                        <td>111.1</td>
+                        <td>112.7</td>
+                        <td>-1.90</td>
+                      </tr>
+                      <tr>
+                        <td>10. Brooklyn Nets #</td>
+                        <td>18</td>
+                        <td>27</td>
+                        <td>.400</td>
+                        <td>16.5</td>
+                        <td>113.3</td>
+                        <td>114.9</td>
+                        <td>-1.65</td>
+                      </tr>
+                      <tr>
+                        <td>11. Atlanta Hawks</td>
+                        <td>18</td>
+                        <td>27</td>
+                        <td>.400</td>
+                        <td>16.5</td>
+                        <td>120.1</td>
+                        <td>123.3</td>
+                        <td>-3.27</td>
+                      </tr>
+                      <tr>
+                        <td>12. Toronto Raptors</td>
+                        <td>16</td>
+                        <td>29</td>
+                        <td>.356</td>
+                        <td>18.5</td>
+                        <td>114.2</td>
+                        <td>116.6</td>
+                        <td>-2.20</td>
+                      </tr>
+                      
+                </tbody>
+              </table>
+              
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
